@@ -29,9 +29,6 @@ jobs:
       - name: Install
         run: yarn --immutable
 
-      - name: Build
-        run: yarn build
-
       - name: Prettier
         run: yarn prettier:check
 
