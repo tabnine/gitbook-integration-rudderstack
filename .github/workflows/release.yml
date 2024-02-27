@@ -1,7 +1,6 @@
 name: Release
 
-on:
-  workflow_dispatch
+on: workflow_dispatch
 
 jobs:
   publish:
@@ -16,4 +15,4 @@ jobs:
       - run: npm install -g @gitbook/cli
       - run: gitbook publish .
         env:
-            GITBOOK_TOKEN: ${{ secrets.GITBOOK_TOKEN }}
+          GITBOOK_TOKEN: ${{ secrets.GITBOOK_TOKEN }}

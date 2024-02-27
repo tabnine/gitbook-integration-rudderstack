@@ -8,7 +8,9 @@ const RUDDER_ANONYMOUS_ID_COOKIE_NAME = 'rl_anonymous_id';
 /**
  * Generate the event to track in RudderStack for an actual GitBook event.
  */
-export default function generateRudderStackTrackEvent(event: api.SpaceViewEvent) {
+export default function generateRudderStackTrackEvent(
+  event: api.SpaceViewEvent
+) {
   const { visitor, referrer, url, spaceId, pageId } = event;
 
   const anonymousId = getAnonymousId(event);
@@ -48,7 +50,7 @@ export default function generateRudderStackTrackEvent(event: api.SpaceViewEvent)
  */
 function getAnonymousId(event: api.SpaceViewEvent): string {
   const { visitor } = event;
-  const {cookies} = visitor;
+  const { cookies } = visitor;
 
   const extractedAnonymousId = extractAnonymousId(cookies);
   console.log('extracted anonymous id', extractedAnonymousId);
