@@ -9,7 +9,6 @@
   },
   "devDependencies": {
     "@babel/preset-env": "^7.23.9",
-    "@esbuild/darwin-arm64": "^0.20.1",
     "@gitbook/cli": "*",
     "@gitbook/eslint-config": "*",
     "@gitbook/tsconfig": "*",
